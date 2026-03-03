@@ -10,7 +10,7 @@ export default function hero() {
           preload="auto"
           data-hero-video="a"
         >
-          <source src="/media/hero-01-bridge.mp4" type="video/mp4" />
+          <source src="/media/hero-01.mp4" type="video/mp4" />
         </video>
         <video
           class="hero-video hero-video-2"
@@ -20,13 +20,13 @@ export default function hero() {
           preload="metadata"
           data-hero-video="b"
         >
-          <source src="/media/hero-02-forest-road.mp4" type="video/mp4" />
+          <source src="/media/hero-02.mp4" type="video/mp4" />
         </video>
         <div class="hero-overlay"></div>
       </div>
       <div class="content hero-content">
         <h1 id="hero-title" class="reveal-title" data-reveal="lines" data-i18n="hero.title">Reliable software delivery for complex business needs.</h1>
-        <p class="hero-subtitle" data-i18n="hero.subtitle">VAGA Technology Inc. is a long-term technology partner that builds and maintains critical systems with clarity and care.</p>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">glamyai is a long-term technology partner that builds and maintains critical systems with clarity and care.</p>
         <div class="hero-ctas reveal-item" data-reveal="item" style="--delay: 660ms;">
           <a class="button" href="#contact" data-i18n="hero.cta_contact">Contact</a>
           <a class="button" href="#careers" data-i18n="hero.cta_careers">Careers</a>

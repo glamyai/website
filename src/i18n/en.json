@@ -1,83 +1,113 @@
 {
-  "brand": "VAGA",
+  "brand": "glamyai",
   "nav": {
-    "what": "Capabilities",
-    "how": "Delivery Model",
-    "products": "E-commerce",
-    "trust": "Trust & Scale",
+    "what": "Product",
+    "how": "How It Works",
+    "products": "Use Cases",
+    "way": "New Way of Working",
+    "trust": "Trust",
     "careers": "Careers",
     "contact": "Contact"
   },
   "hero": {
-    "title": "Reliable software delivery for long-term business needs.",
-    "subtitle": "A trusted technology partner, building and maintaining critical systems with clarity and care.",
-    "cta_contact": "Contact",
+    "title": "AI you can operate, not just chat with",
+    "subtitle": "Route requests, run workflows, and keep costs and outcomes observable — grounded in your company data.",
+    "cta_contact": "Talk to us",
     "cta_careers": "Careers"
   },
   "what": {
-    "title": "Capabilities",
-    "lead": "We turn complex requirements into reliable systems.",
+    "title": "Build controlled AI workflows for real operations",
+    "lead": "Glamy lets you use popular AI models on your company data in a cost-effective way.",
     "cap1": {
-      "title": "Business software platforms",
-      "desc": "We design and deliver stable platforms that support core operations."
+      "title": "Request Routing",
+      "desc": "Control how requests are routed to models or configurations."
     },
     "cap2": {
-      "title": "System integration",
-      "desc": "We connect existing systems to reduce friction and improve flow."
+      "title": "Run Configurations",
+      "desc": "Run controlled configurations with explicit steps."
     },
     "cap3": {
-      "title": "Operational automation",
-      "desc": "We streamline repeatable processes to improve reliability and speed."
+      "title": "Observable Operations",
+      "desc": "Track costs, usage, and outcomes across interactions."
     }
   },
   "how": {
-    "title": "Delivery Model",
+    "title": "How You Move Forward",
     "model1": {
-      "title": "Flexible Development (T&M)",
-      "desc": "Adaptive teams that scale with your priorities. We work closely with your stakeholders, keep feedback loops short, and ship in steady increments. Ideal when scope evolves but delivery needs to stay predictable."
+      "title": "1. Set Up — Connect your data and define rules",
+      "desc": "Connect your company data and set access boundaries and usage rules. AI behavior stays within clear limits from the start."
     },
     "model2": {
-      "title": "Turnkey Projects",
-      "desc": "Clear scope delivery with defined outcomes, managed end-to-end by VAGA. We align on requirements, milestones, and acceptance criteria upfront, then execute with disciplined planning and transparent progress. Best for projects where clarity and ownership matter."
+      "title": "2. Run — Start controlled interactions",
+      "desc": "Run interactions based on your configurations. The same requests follow the same rules, predictably."
     },
     "model3": {
-      "title": "Man-Day Engagement",
-      "desc": "Short, focused allocations for well-defined tasks or support needs. We plug into your workflow, resolve targeted items quickly, and leave behind clean handover notes. A practical option for bursts of work without long onboarding."
+      "title": "3. Observe — Monitor costs and outcomes",
+      "desc": "Track spend and outputs across interactions. Adjust configurations when needed, and keep control."
     }
   },
   "products": {
-    "label": "E-commerce",
-    "title": "End-to-end commerce infrastructure for grocery retail.",
-    "subline": "A modular, API-first platform running storefront, orders, logistics, and ERP integrations at enterprise scale.",
+    "label": "Use Cases",
+    "title": "Glamy is not designed as a tool that just talks, but as a role that works within your business.",
+    "subline": "Across sales, operations, and every customer touchpoint, it supports your team, takes responsibility, and moves the work forward.",
     "techstack": {
-      "headline": "Production-grade tech stack, proven in real operations."
+      "headline": "An infrastructure designed to be part of everyday operations.",
+      "items": {
+        "crm": "CRM Systems",
+        "erp": "ERP & Operations",
+        "ticketing": "Ticketing",
+        "messaging": "Messaging Channels",
+        "documents": "Documents",
+        "spreadsheets": "Spreadsheets",
+        "apis": "Internal APIs"
+      }
     },
     "domains": {
       "platform": {
-        "title": "Platform Architecture",
-        "desc": "Event-driven backend with async workflows and strict domain boundaries."
+        "title": "Sales Enablement",
+        "desc": "Real-time support during sales conversations. Use live CRM and product catalog data to help your sales team respond accurately and reduce presales dependency.",
+        "tags": {
+          "one": "live crm",
+          "two": "product catalog",
+          "three": "faster cycles"
+        }
       },
       "client": {
-        "title": "Client Applications",
-        "desc": "Multi-channel web and mobile clients built on shared, contract-safe APIs."
+        "title": "Customer Operations",
+        "desc": "Turn messages into completed requests. Handle reservations and incoming requests from channels like WhatsApp and write them into your systems to reduce manual work.",
+        "tags": {
+          "one": "whatsapp",
+          "two": "auto capture",
+          "three": "less manual work"
+        }
       },
       "infrastructure": {
-        "title": "Infrastructure & Operations",
-        "desc": "Container-first delivery with environment parity and controlled scaling."
+        "title": "Front Desk & Concierge",
+        "desc": "Always-on service for guests and customers. Act as a front desk or concierge assistant, handle requests, and open tickets when needed to keep service running smoothly.",
+        "tags": {
+          "one": "always-on",
+          "two": "ticketing",
+          "three": "faster response"
+        }
       },
       "observability": {
-        "title": "Observability & Contracts",
-        "desc": "End-to-end tracing and contract-driven integration to prevent drift."
+        "title": "Internal Assistants",
+        "desc": "Instant help for internal teams. Answer internal questions, explain procedures, and guide people to the right place to shorten onboarding and adaptation time.",
+        "tags": {
+          "one": "onboarding",
+          "two": "internal help",
+          "three": "faster adaptation"
+        }
       }
     },
-    "trademark": "All trademarks and logos are the property of their respective owners.",
+    "trademark": "",
     "suite": {
-      "title": "Product suite",
-      "lead": "Everything you need to operate modern grocery commerce at scale",
+      "title": "New Way of Working",
+      "lead": "Work is changing, and you don’t have to handle it alone.",
       "cards": {
         "storefront_web": {
-          "title": "Storefront Web",
-          "desc": "Customer-facing web storefront with catalog, campaigns, and checkout.",
+          "title": "Increase Human Capacity",
+          "desc": "Glamy boosts the capacity and adaptability of your existing team to achieve more with the same people.",
           "tags": {
             "web": "Web",
             "ssr_isr": "SSR/ISR",
@@ -85,8 +115,8 @@
           }
         },
         "storefront_mobile": {
-          "title": "Storefront Mobile",
-          "desc": "Mobile shopping experience for repeat orders and personalized discovery.",
+          "title": "Large Teams, Lower Cost",
+          "desc": "Handle large workloads sustainably with focused teams while keeping costs under control.",
           "tags": {
             "ios_android": "iOS/Android",
             "white_label": "White-label",
@@ -94,8 +124,8 @@
           }
         },
         "picking_distribution": {
-          "title": "Picking & Distribution",
-          "desc": "In-store picker app to manage orders, substitutions, and packing flows.",
+          "title": "Scale Flexibly",
+          "desc": "Grow your business confidently as demand increases, without expanding headcount.",
           "tags": {
             "operations": "Operations",
             "real_time": "Real-time",
@@ -103,8 +133,8 @@
           }
         },
         "office": {
-          "title": "Office",
-          "desc": "Admin console for catalog, pricing, orders, and operational control.",
+          "title": "Don’t Fall Behind",
+          "desc": "Companies adopting new ways of working today are setting the pace for tomorrow.",
           "tags": {
             "admin": "Admin",
             "rbac": "RBAC",
@@ -115,17 +145,18 @@
     }
   },
   "trust": {
-    "title": "Trust & Scale",
+    "title": "Trust",
     "countries": {
-      "label": "Countries of operation:",
-      "list": "Turkey · Italy · United States · Malta"
+      "label": "",
+      "list": ""
     },
-    "statement1": "Long-term partnerships built on consistent delivery.",
-    "statement2": "Calm, dependable execution across complex environments.",
-    "statement3": "Clear communication and accountable collaboration.",
-    "headline": "Trusted by teams operating at scale, with clear ownership and lasting relations.",
+    "statement1": "",
+    "statement2": "",
+    "statement3": "",
+    "headline": "Customer references will be added once verified and approved.",
+    "placeholder": "Customer references will be added once verified and approved.",
     "markets": {
-      "label": "Markets served"
+      "label": ""
     }
   },
   "careers": {
@@ -142,7 +173,7 @@
   "contact": {
     "title": "Contact",
     "email_label": "Email:",
-    "email": "contact@vaga.tech",
+    "email": "contact@glamyai.com",
     "form": {
       "name": "Name",
       "email": "Email",
@@ -160,5 +191,5 @@
       }
     }
   },
-  "footer": "© 2026 VAGA Teknoloji A.Ş."
+  "footer": "© 2026 Glamy AI"
 }

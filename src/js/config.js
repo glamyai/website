@@ -1,2 +1,2 @@
-export const CONTACT_EMAIL = "contact@vaga.tech";
-export const CAREERS_EMAIL = "careers@vaga.tech";
+export const CONTACT_EMAIL = "contact@glamyai.com";
+export const CAREERS_EMAIL = "careers@glamyai.com";

@@ -2,7 +2,7 @@ export default function footer() {
   return `
     <footer>
       <div class="content">
-        <small data-i18n="footer">VAGA Technology Inc.</small>
+        <small data-i18n="footer">glamyai</small>
       </div>
     </footer>
   `;

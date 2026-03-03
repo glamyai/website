@@ -9,7 +9,7 @@ export default function contact() {
               <span class="contact-card__tab" aria-hidden="true"></span>
               <h2 id="contact-title" data-i18n="contact.cards.contact.title">Contact</h2>
               <p data-i18n="contact.cards.contact.desc">For inquiries, partnerships, or general questions, email us.</p>
-              <a class="contact-card__email" href="mailto:contact@vagani.com">contact@vagani.com</a>
+              <a class="contact-card__email" href="mailto:contact@glamyai.com">contact@glamyai.com</a>
             </div>
             <div class="contact-card__stripe" aria-hidden="true"></div>
           </article>
@@ -18,7 +18,7 @@ export default function contact() {
               <span class="contact-card__tab" aria-hidden="true"></span>
               <h2 data-i18n="contact.cards.careers.title">Careers</h2>
               <p data-i18n="contact.cards.careers.desc">If you value clarity, responsibility, and steady progress, we’d like to hear from you.</p>
-              <a class="contact-card__email" href="mailto:careers@vagani.com">careers@vagani.com</a>
+              <a class="contact-card__email" href="mailto:careers@glamyai.com">careers@glamyai.com</a>
             </div>
             <div class="contact-card__stripe" aria-hidden="true"></div>
           </article>

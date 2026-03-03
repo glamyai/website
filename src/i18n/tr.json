@@ -1,83 +1,113 @@
 {
-  "brand": "VAGA",
+  "brand": "glamyai",
   "nav": {
-    "what": "Yetkinlikler",
-    "how": "Teslimat Modeli",
-    "products": "E-ticaret",
-    "trust": "Güven & Ölçek",
+    "what": "Ürün",
+    "how": "Nasıl Çalışır",
+    "products": "Kullanım Alanları",
+    "way": "Yeni Çalışma Modeli",
+    "trust": "Güven",
     "careers": "Kariyer",
     "contact": "İletişim"
   },
   "hero": {
-    "title": "Uzun vadeli iş ihtiyaçlarını destekleyen güvenilir yazılım çözümleri.",
-    "subtitle": "Kritik sistemleri disiplinle kuran ve sürdüren teknoloji ortağı.",
-    "cta_contact": "İletişim",
+    "title": "Sadece konuşan değil, yönetilebilen yapay zeka",
+    "subtitle": "İstekleri yönlendirin, iş akışlarını çalıştırın; şirket verinize dayanarak maliyeti ve çıktıları görünür tutun.",
+    "cta_contact": "İletişime geçin",
     "cta_careers": "Kariyer"
   },
   "what": {
-    "title": "Yetkinlikler",
-    "lead": "Karmaşık iş ihtiyaçlarını güvenilir sistemlere dönüştürüyoruz.",
+    "title": "Gerçek operasyonlar için kontrollü yapay zeka iş akışları",
+    "lead": "Glamy, popüler yapay zeka modellerini şirket verinizle maliyet etkin kullanmanızı sağlar.",
     "cap1": {
-      "title": "İş yazılım platformları",
-      "desc": "Temel operasyonları destekleyen, uzun ömürlü ve sürdürülebilir platformlar tasarlayıp teslim ediyoruz."
+      "title": "İstek Yönlendirme",
+      "desc": "İsteklerin hangi modele veya kurguya gideceğini kontrol edin."
     },
     "cap2": {
-      "title": "Sistem entegrasyonu",
-      "desc": "Mevcut sistemleri entegre ederek operasyonel akışı sadeleştiriyoruz."
+      "title": "İş Akışı Çalıştırma",
+      "desc": "Her adımı kontrol altında olan kurgular çalıştırın."
     },
     "cap3": {
-      "title": "Operasyonel otomasyon",
-      "desc": "Tekrarlayan süreçleri otomatikleştirerek operasyonel verimliliği artırıyoruz."
+      "title": "Gözlemlenebilir Operasyonlar",
+      "desc": "Etkileşim boyunca maliyetleri, kullanımı ve çıktıları izleyin."
     }
   },
   "how": {
-    "title": "Teslimat Modeli",
+    "title": "Nasıl İlerlersiniz",
     "model1": {
-      "title": "Esnek Geliştirme (T&M)",
-      "desc": "İş önceliklerinize göre ölçeklenen esnek ekiplerle çalışma modeli. Paydaşlarınızla yakın çalışır, geri bildirimleri hızlıca sürece yansıtır ve planlı adımlarla ilerleriz. İhtiyaçların zaman içinde netleştiği, ancak teslimat disiplininin korunması gereken projeler için uygundur."
+      "title": "1. Kur - Verinizi ve kuralları tanımlayın",
+      "desc": "Şirket verinizi bağlayın, erişim sınırlarını ve kullanım kurallarını belirleyin. Yapay zeka neyi, nasıl ve hangi sınırlar içinde kullanacağını baştan bilir."
     },
     "model2": {
-      "title": "Anahtar Teslim Projeler",
-      "desc": "Net kapsamla tanımlı çıktılar; uçtan uca VAGA tarafından yönetilir. Gereksinimler, kilometre taşları ve kabul kriterlerinde baştan hizalanır, disiplinli planlama ve şeffaf ilerlemeyle yürütülür. Netlik, sorumluluk ve uçtan uca sahipliğin önemli olduğu projeler için uygundur."
+      "title": "2. Çalıştır - Kontrollü etkileşimleri başlatın",
+      "desc": "Tanımladığınız kurgulara göre etkileşimleri çalıştırın. Aynı istekler, aynı kurallarla, öngörülebilir şekilde ilerler."
     },
     "model3": {
-      "title": "Adam-Gün Çalışması",
-      "desc": "Tanımlı işlere veya destek ihtiyaçlarına yönelik kısa süreli, odaklı çalışmalar. İş akışınıza hızlıca entegre olur, hedefli işleri çözer ve net devir ile dokümantasyon sağlar. Kısa süreli ihtiyaçlar için hızlı ve etkili bir çalışma modelidir."
+      "title": "3. Gör - Maliyetleri ve çıktıları izleyin",
+      "desc": "Etkileşimler boyunca harcamaları ve üretilen çıktıları görün. Gerektikçe kurguları güncelleyin, kontrolü elinizde tutun."
     }
   },
   "products": {
-    "label": "E-ticaret",
-    "title": "Gıda perakendesi için uçtan uca ticaret altyapısı.",
-    "subline": "Dijital mağaza, sipariş yönetimi, toplama, lojistik ve ERP bağlantılarını uçtan uca yürüten modüler, API‑öncelikli bir platform — kurumsal ölçekte operasyonları desteklemek üzere tasarlandı.",
+    "label": "Kullanım Alanları",
+    "title": "Glamy’i işinizde sadece konuşan bir araç değil, çalışan bir rol olarak tasarladık.",
+    "subline": "Satışta, operasyonda ve müşteriyle temas eden her noktada ekibinizin yanında durur, görev alır ve işi ilerletir.",
     "techstack": {
-      "headline": "Üretim ortamlarında kullanılan, sahada kendini kanıtlamış teknolojiler."
+      "headline": "Günlük operasyonların parçası olacak şekilde tasarlanmış bir altyapı.",
+      "items": {
+        "crm": "CRM Sistemleri",
+        "erp": "ERP ve Operasyon",
+        "ticketing": "Ticket ve Destek",
+        "messaging": "Mesajlaşma Kanalları",
+        "documents": "Dokümanlar",
+        "spreadsheets": "Tablolar",
+        "apis": "İç API’ler"
+      }
     },
     "domains": {
       "platform": {
-        "title": "Platform Mimarisi",
-        "desc": "Asenkron iş akışları ve net sorumluluk ayrımlarıyla olay güdümlü bir backend mimarisi."
+        "title": "Satış Destek",
+        "desc": "Satış görüşmelerinde anında destek. CRM veriniz ve ürün katalog verinizle satış ekibinizin görüşme anında doğru bilgiyle ilerlemesini sağlar ve ön satış ihtiyacını azaltır.",
+        "tags": {
+          "one": "gerçek veri",
+          "two": "anında destek",
+          "three": "daha hızlı satış"
+        }
       },
       "client": {
-        "title": "İstemci Uygulamaları",
-        "desc": "Paylaşılan ve sözleşme bazlı API’ler üzerine kurulu çok kanallı web ve mobil istemciler."
+        "title": "Müşteri Operasyonları",
+        "desc": "Mesajları işleme dönüştürün. WhatsApp gibi kanallardan gelen rezervasyon ve talepleri alır, sistemlerinize işler ve manuel işi azaltır.",
+        "tags": {
+          "one": "whatsapp",
+          "two": "otomatik kayıt",
+          "three": "daha az manuel iş"
+        }
       },
       "infrastructure": {
-        "title": "Altyapı ve Operasyonlar",
-        "desc": "Ortamlar arası tutarlılık ve kontrollü ölçekleme sağlayan, konteyner-öncelikli teslimat yaklaşımı."
+        "title": "Ön Büro & Konsiyerj",
+        "desc": "Misafirler için kesintisiz hizmet. Resepsiyon veya konsiyerj asistanı gibi çalışır; talepleri karşılar ve gerektiğinde kayıt açar, hizmetin aksamamasını sağlar.",
+        "tags": {
+          "one": "7/24",
+          "two": "ticket açma",
+          "three": "hızlı yanıt"
+        }
       },
       "observability": {
-        "title": "Gözlemlenebilirlik ve Sözleşmeler",
-        "desc": "Olası sorunları erken tespit etmek için uçtan uca izleme ve sözleşme odaklı entegrasyon."
+        "title": "İç Asistanlar",
+        "desc": "İç ekipler için anında destek. İç soruları yanıtlar, prosedürleri açıklar ve doğru yöne yönlendirir; uyum ve adaptasyon süresini kısaltır.",
+        "tags": {
+          "one": "hızlı adaptasyon",
+          "two": "iç destek",
+          "three": "daha az soru"
+        }
       }
     },
-    "trademark": "Tüm ticari markalar ve logolar, ilgili şirketlerin mülkiyetindedir.",
+    "trademark": "",
     "suite": {
-      "title": "Ürün paketi",
-      "lead": "Modern gıda perakendesini büyük ölçekte yürütmek için ihtiyacınız olan her şey",
+      "title": "Yeni Çalışma Modeli",
+      "lead": "Çalışma biçimi değişiyor, bunu tek başınıza yönetmek zorunda değilsiniz.",
       "cards": {
         "storefront_web": {
-          "title": "Web Mağaza",
-          "desc": "Katalog, kampanyalar ve ödeme akışıyla müşteri odaklı web storefront.",
+          "title": "İnsan Çalışanlarınızın Kapasitesini Artırın",
+          "desc": "Glamy, mevcut çalışanlarınızın kapasitesini ve adaptasyonunu artırarak aynı ekiple daha fazlasını mümkün kılar.",
           "tags": {
             "web": "Web",
             "ssr_isr": "SSR/ISR",
@@ -85,8 +115,8 @@
           }
         },
         "storefront_mobile": {
-          "title": "Mobil Mağaza",
-          "desc": "Tekrarlı siparişler ve kişiselleştirilmiş keşif için mobil alışveriş deneyimi.",
+          "title": "Az Maliyetle Büyük Ekipler",
+          "desc": "Glamy ile odak ekiplerle büyük iş yükünü sürdürülebilir şekilde yönetin ve maliyetlerinizi kontrol altında tutun.",
           "tags": {
             "ios_android": "iOS/Android",
             "white_label": "Marka bağımsız",
@@ -94,8 +124,8 @@
           }
         },
         "picking_distribution": {
-          "title": "Toplama & Dağıtım",
-          "desc": "Sipariş, ikame, paketleme ve teslimat akışlarını yöneten mağaza içi picker uygulaması.",
+          "title": "Esnek Ölçeklenin",
+          "desc": "Talep arttığında yeni ekipler kurmadan işinizi güvenle büyütün.",
           "tags": {
             "operations": "Operasyonlar",
             "real_time": "Gerçek zamanlı",
@@ -103,8 +133,8 @@
           }
         },
         "office": {
-          "title": "Ofis",
-          "desc": "Katalog, fiyatlama, siparişler ve operasyonel kontrol için yönetim konsolu.",
+          "title": "Geri Kalmayın",
+          "desc": "Yeni çalışma modellerini bugün benimseyen şirketler, yarının rekabetinde öne geçiyor.",
           "tags": {
             "admin": "Yönetim",
             "rbac": "RBAC",
@@ -115,17 +145,18 @@
     }
   },
   "trust": {
-    "title": "Güven & Ölçek",
+    "title": "Güven",
     "countries": {
-      "label": "Faaliyet gösterilen ülkeler:",
-      "list": "Türkiye · İtalya · Amerika Birleşik Devletleri · Malta"
+      "label": "",
+      "list": ""
     },
-    "statement1": "Tutarlı teslimatla kurulan uzun vadeli ortaklıklar.",
-    "statement2": "Karmaşık ortamlarda sakin ve güvenilir yürütme.",
-    "statement3": "Açık iletişim ve hesap verebilir iş birliği.",
-    "headline": "Büyük ölçekte çalışan ekiplerin güvendiği, net sorumluluk anlayışına ve uzun vadeli iş ilişkilerine dayalı bir yaklaşım.",
+    "statement1": "",
+    "statement2": "",
+    "statement3": "",
+    "headline": "Müşteri referansları doğrulandıktan ve onaylandıktan sonra eklenecektir.",
+    "placeholder": "Müşteri referansları doğrulandıktan ve onaylandıktan sonra eklenecektir.",
     "markets": {
-      "label": "Hizmet sunduğumuz bölgeler"
+      "label": ""
     }
   },
   "careers": {
@@ -142,7 +173,7 @@
   "contact": {
     "title": "İletişim",
     "email_label": "E-posta:",
-    "email": "contact@vaga.tech",
+    "email": "contact@glamyai.com",
     "form": {
       "name": "İsim",
       "email": "E-posta",
@@ -160,5 +191,5 @@
       }
     }
   },
-  "footer": "© 2026 VAGA Teknoloji A.Ş."
+  "footer": "© 2026 Glamy AI"
 }

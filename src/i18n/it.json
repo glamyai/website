@@ -1,83 +1,113 @@
 {
-  "brand": "VAGA",
+  "brand": "glamyai",
   "nav": {
-    "what": "Competenze",
-    "how": "Modello di Consegna",
-    "products": "E-commerce",
-    "trust": "Affidabilità & Scala",
+    "what": "Prodotto",
+    "how": "Come Funziona",
+    "products": "Casi d'uso",
+    "way": "Nuovo Modello di Lavoro",
+    "trust": "Trust",
     "careers": "Carriere",
-    "contact": "Contatto"
+    "contact": "Contatti"
   },
   "hero": {
-    "title": "Soluzioni software affidabili per esigenze di lungo periodo.",
-    "subtitle": "Un partner tecnologico di fiducia che progetta e mantiene sistemi critici con rigore e attenzione.",
-    "cta_contact": "Contatto",
+    "title": "AI che puoi gestire, non solo con cui chattare",
+    "subtitle": "Instrada le richieste ed esegui workflow, mantenendo costi e risultati osservabili sulla base dei dati della tua azienda.",
+    "cta_contact": "Parliamone",
     "cta_careers": "Carriere"
   },
   "what": {
-    "title": "Competenze",
-    "lead": "Trasformiamo requisiti complessi in sistemi affidabili e sostenibili nel tempo.",
+    "title": "Workflow di intelligenza artificiale controllati per le operazioni reali",
+    "lead": "Glamy consente di utilizzare i principali modelli di intelligenza artificiale sui dati aziendali in modo efficiente nei costi.",
     "cap1": {
-      "title": "Piattaforme software aziendali",
-      "desc": "Progettiamo e realizziamo piattaforme robuste a supporto delle operazioni principali."
+      "title": "Instradamento delle Richieste",
+      "desc": "Controlla come le richieste vengono instradate verso modelli o configurazioni."
     },
     "cap2": {
-      "title": "Integrazione di sistema",
-      "desc": "Integriamo i sistemi esistenti per semplificare i processi e migliorare il flusso operativo."
+      "title": "Esecuzione dei Workflow",
+      "desc": "Esegui configurazioni controllate con passaggi espliciti."
     },
     "cap3": {
-      "title": "Automazione operativa",
-      "desc": "Automatizziamo i processi ripetitivi per aumentare efficienza operativa e affidabilità."
+      "title": "Operazioni Osservabili",
+      "desc": "Monitora costi, utilizzo e risultati durante le interazioni."
     }
   },
   "how": {
-    "title": "Modello di Consegna",
+    "title": "Come Procedi",
     "model1": {
-      "title": "Sviluppo Flessibile (T&M)",
-      "desc": "Team adattivi che scalano con le tue priorità. Lavoriamo a stretto contatto con gli stakeholder, manteniamo brevi i cicli di feedback e avanziamo per iterazioni pianificate. Ideale quando i requisiti evolvono nel tempo, ma la consegna deve rimanere prevedibile."
+      "title": "1. Configura - Collega i dati e definisci le regole",
+      "desc": "Collega i dati aziendali e definisci confini di accesso e regole di utilizzo. Il comportamento dell'AI resta entro limiti chiari fin dall'inizio."
     },
     "model2": {
-      "title": "Progetti Chiavi in Mano",
-      "desc": "Consegna a scope definito con risultati chiari, gestita end-to-end da VAGA. Allineiamo requisiti, milestone e criteri di accettazione a monte, poi eseguiamo con pianificazione disciplinata e progresso trasparente. Adatto a progetti dove sono fondamentali chiarezza e responsabilità end-to-end."
+      "title": "2. Esegui - Avvia interazioni controllate",
+      "desc": "Esegui le interazioni in base alle configurazioni. Le stesse richieste seguono le stesse regole, in modo prevedibile."
     },
     "model3": {
-      "title": "Ingaggio Man‑Day",
-      "desc": "Interventi brevi e mirati per attività ben definite o esigenze di supporto. Ci integriamo nel tuo workflow, risolviamo rapidamente i punti mirati e lasciamo note di handover pulite. Un modello efficace per esigenze a breve termine, senza onboarding complesso."
+      "title": "3. Osserva - Monitora costi e risultati",
+      "desc": "Monitora costi e output durante le interazioni. Aggiorna le configurazioni quando serve e mantieni il controllo."
     }
   },
   "products": {
-    "label": "E-commerce",
-    "title": "Infrastruttura commerce end‑to‑end per il retail grocery.",
-    "subline": "Una piattaforma modulare e API‑first che gestisce storefront digitale, gestione ordini, picking, logistica e connettività ERP — progettata per operazioni su scala enterprise.",
+    "label": "Ambiti di utilizzo",
+    "title": "Glamy non è stato progettato come uno strumento che si limita a parlare, ma come un ruolo operativo nel tuo business.",
+    "subline": "Nelle vendite, nelle operazioni e in ogni punto di contatto con il cliente, affianca il tuo team, svolge compiti concreti e fa avanzare il lavoro.",
     "techstack": {
-      "headline": "Tecnologie production-grade, già collaudate in contesti operativi reali."
+      "headline": "Un’infrastruttura progettata per far parte delle operazioni quotidiane.",
+      "items": {
+        "crm": "Sistemi CRM",
+        "erp": "ERP e Operazioni",
+        "ticketing": "Ticketing e Supporto",
+        "messaging": "Canali di Messaggistica",
+        "documents": "Documenti",
+        "spreadsheets": "Fogli di Calcolo",
+        "apis": "API Interne"
+      }
     },
     "domains": {
       "platform": {
-        "title": "Architettura di Piattaforma",
-        "desc": "Backend event-driven con workflow asincroni e chiara separazione delle responsabilità di dominio."
+        "title": "Supporto alle Vendite",
+        "desc": "Supporto in tempo reale durante la vendita. Usa dati CRM e catalogo prodotti aggiornati per aiutare il team di vendita a rispondere con precisione e ridurre la dipendenza dal presales.",
+        "tags": {
+          "one": "dati crm",
+          "two": "catalogo prodotti",
+          "three": "ciclo piu rapido"
+        }
       },
       "client": {
-        "title": "Applicazioni Client",
-        "desc": "Client web e mobile multicanale basati su API condivise e contrattuali."
+        "title": "Operazioni Clienti",
+        "desc": "Dai messaggi alle richieste completate. Gestisce prenotazioni e richieste da canali come WhatsApp e le registra nei tuoi sistemi per ridurre il lavoro manuale.",
+        "tags": {
+          "one": "whatsapp",
+          "two": "registrazione automatica",
+          "three": "meno lavoro manuale"
+        }
       },
       "infrastructure": {
-        "title": "Infrastruttura e Operations",
-        "desc": "Consegna container-first con coerenza tra gli ambienti e scaling controllato."
+        "title": "Reception & Concierge",
+        "desc": "Servizio continuo per ospiti e clienti. Opera come assistente di reception o concierge, gestisce le richieste e apre ticket quando serve per mantenere il servizio fluido.",
+        "tags": {
+          "one": "sempre attivo",
+          "two": "ticket",
+          "three": "risposta rapida"
+        }
       },
       "observability": {
-        "title": "Osservabilità e Contratti",
-        "desc": "Tracing end-to-end e integrazione contract-driven per prevenire incoerenze operative."
+        "title": "Assistenti Interni",
+        "desc": "Supporto immediato per i team interni. Risponde alle domande interne, spiega le procedure e guida le persone al posto giusto per accelerare onboarding e adattamento.",
+        "tags": {
+          "one": "onboarding",
+          "two": "supporto interno",
+          "three": "adattamento piu rapido"
+        }
       }
     },
-    "trademark": "Tutti i marchi e i loghi sono di proprietà dei rispettivi titolari.",
+    "trademark": "",
     "suite": {
-      "title": "Suite prodotti",
-      "lead": "Tutto ciò che serve per gestire il commercio alimentare moderno su scala",
+      "title": "Nuovo Modello di Lavoro",
+      "lead": "Il modo di lavorare sta cambiando, non devi affrontarlo da solo.",
       "cards": {
         "storefront_web": {
-          "title": "Vetrina Web",
-          "desc": "Storefront web customer-facing con catalogo, campagne e checkout.",
+          "title": "Aumenta la Capacità Umana",
+          "desc": "Glamy potenzia la capacità e l’adattamento del tuo team per ottenere di più con le stesse persone.",
           "tags": {
             "web": "Web",
             "ssr_isr": "SSR/ISR",
@@ -85,8 +115,8 @@
           }
         },
         "storefront_mobile": {
-          "title": "Vetrina Mobile",
-          "desc": "Esperienza di acquisto mobile per riordini e scoperta personalizzata.",
+          "title": "Grandi Team, Costi Ridotti",
+          "desc": "Gestisci grandi carichi di lavoro in modo sostenibile con team snelli e controlla i costi.",
           "tags": {
             "ios_android": "iOS/Android",
             "white_label": "A marchio bianco",
@@ -94,8 +124,8 @@
           }
         },
         "picking_distribution": {
-          "title": "Picking & Distribuzione",
-          "desc": "App per picker in-store per gestire ordini, sostituzioni, packing e flussi di consegna.",
+          "title": "Scala in Modo Flessibile",
+          "desc": "Fai crescere il business in sicurezza senza aumentare il personale.",
           "tags": {
             "operations": "Operazioni",
             "real_time": "Tempo reale",
@@ -103,8 +133,8 @@
           }
         },
         "office": {
-          "title": "Ufficio",
-          "desc": "Console admin per catalogo, pricing, ordini e controllo operativo.",
+          "title": "Non Restare Indietro",
+          "desc": "Le aziende che adottano oggi nuovi modelli di lavoro guidano la competizione di domani.",
           "tags": {
             "admin": "Amministrazione",
             "rbac": "RBAC",
@@ -115,17 +145,18 @@
     }
   },
   "trust": {
-    "title": "Affidabilità & Scala",
+    "title": "Trust",
     "countries": {
-      "label": "Paesi di operatività:",
-      "list": "Turchia · Italia · Stati Uniti · Malta"
+      "label": "",
+      "list": ""
     },
-    "statement1": "Partnership di lungo periodo basate su una consegna costante.",
-    "statement2": "Esecuzione calma e affidabile in ambienti complessi.",
-    "statement3": "Comunicazione chiara e collaborazione responsabile.",
-    "headline": "Scelti da team che operano su larga scala, con responsabilità chiare e relazioni di lungo periodo.",
+    "statement1": "",
+    "statement2": "",
+    "statement3": "",
+    "headline": "Le referenze clienti verranno aggiunte dopo verifica e approvazione.",
+    "placeholder": "Le referenze clienti verranno aggiunte dopo verifica e approvazione.",
     "markets": {
-      "label": "Mercati serviti"
+      "label": ""
     }
   },
   "careers": {
@@ -142,7 +173,7 @@
   "contact": {
     "title": "Contatto",
     "email_label": "Email:",
-    "email": "contact@vaga.tech",
+    "email": "contact@glamyai.com",
     "form": {
       "name": "Nome",
       "email": "Email",
@@ -160,5 +191,5 @@
       }
     }
   },
-  "footer": "© 2026 VAGA Teknoloji A.Ş."
+  "footer": "© 2026 Glamy AI"
 }

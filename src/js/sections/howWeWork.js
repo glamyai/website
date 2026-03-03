@@ -5,7 +5,7 @@ export default function howWeWork() {
         <h2 id="how-title" data-i18n="how.title">Delivery Model</h2>
         <div class="delivery-layout">
           <div class="delivery-visual">
-            <img src="/media/delivery-model-collaboration.png" alt="" aria-hidden="true" />
+            <img src="/media/how-it-works.png" alt="" aria-hidden="true" />
           </div>
           <div class="delivery-items">
             <div class="delivery-item">
@@ -14,7 +14,7 @@ export default function howWeWork() {
             </div>
             <div class="delivery-item">
               <h3 data-i18n="how.model2.title">Turnkey Projects</h3>
-              <p data-i18n="how.model2.desc">Clear scope delivery with defined outcomes, managed end-to-end by VAGA. We align on requirements, milestones, and acceptance criteria upfront, then execute with disciplined planning and transparent progress. Best for projects where clarity and ownership matter.</p>
+              <p data-i18n="how.model2.desc">Clear scope delivery with defined outcomes, managed end-to-end by glamyai. We align on requirements, milestones, and acceptance criteria upfront, then execute with disciplined planning and transparent progress. Best for projects where clarity and ownership matter.</p>
             </div>
             <div class="delivery-item">
               <h3 data-i18n="how.model3.title">Man-Day Engagement</h3>
