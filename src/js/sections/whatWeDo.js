@@ -2,8 +2,8 @@ export default function whatWeDo() {
   return `
     <section id="what-we-do" class="capabilities" aria-labelledby="what-title">
       <div class="content">
-        <h2 id="what-title" data-i18n="what.title">Capabilities</h2>
-        <p class="capabilities-lead" data-i18n="what.lead">We turn complex requirements into reliable systems.</p>
+        <h2 id="what-title" data-i18n="what.title">Build controlled AI workflows for real operations</h2>
+        <p class="capabilities-lead" data-i18n="what.lead">Glamy lets you use popular AI models on your company data in a cost-effective way.</p>
         <div class="grid-3">
           <div class="cap-card">
             <div class="capability-media">
@@ -11,8 +11,8 @@ export default function whatWeDo() {
                 <img src="/media/capabilities/routing.png" alt="" aria-hidden="true" />
               </div>
             </div>
-            <h3 class="cap-title" data-i18n="what.cap1.title">Business software platforms</h3>
-            <p data-i18n="what.cap1.desc">We design and deliver stable platforms that support core operations.</p>
+            <h3 class="cap-title" data-i18n="what.cap1.title">Request Routing</h3>
+            <p data-i18n="what.cap1.desc">Control how requests are routed to models or configurations.</p>
           </div>
           <div class="cap-card">
             <div class="capability-media">
@@ -20,8 +20,8 @@ export default function whatWeDo() {
                 <img src="/media/capabilities/workflow.png" alt="" aria-hidden="true" />
               </div>
             </div>
-            <h3 class="cap-title" data-i18n="what.cap2.title">System integration</h3>
-            <p data-i18n="what.cap2.desc">We connect existing systems to reduce friction and improve flow.</p>
+            <h3 class="cap-title" data-i18n="what.cap2.title">Run Configurations</h3>
+            <p data-i18n="what.cap2.desc">Run controlled configurations with explicit steps.</p>
           </div>
           <div class="cap-card">
             <div class="capability-media">
@@ -29,8 +29,8 @@ export default function whatWeDo() {
                 <img src="/media/capabilities/observability.png" alt="" aria-hidden="true" />
               </div>
             </div>
-            <h3 class="cap-title" data-i18n="what.cap3.title">Operational automation</h3>
-            <p data-i18n="what.cap3.desc">We streamline repeatable processes to improve reliability and speed.</p>
+            <h3 class="cap-title" data-i18n="what.cap3.title">Observable Operations</h3>
+            <p data-i18n="what.cap3.desc">Track costs, usage, and outcomes across interactions.</p>
           </div>
         </div>
       </div>

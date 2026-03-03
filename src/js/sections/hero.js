@@ -25,10 +25,10 @@ export default function hero() {
         <div class="hero-overlay"></div>
       </div>
       <div class="content hero-content">
-        <h1 id="hero-title" class="reveal-title" data-reveal="lines" data-i18n="hero.title">Reliable software delivery for complex business needs.</h1>
-        <p class="hero-subtitle" data-i18n="hero.subtitle">glamyai is a long-term technology partner that builds and maintains critical systems with clarity and care.</p>
+        <h1 id="hero-title" class="reveal-title" data-reveal="lines" data-i18n="hero.title">AI you can operate, not just chat with</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">Route requests, run workflows, and keep costs and outcomes observable — grounded in your company data.</p>
         <div class="hero-ctas reveal-item" data-reveal="item" style="--delay: 660ms;">
-          <a class="button" href="#contact" data-i18n="hero.cta_contact">Contact</a>
+          <a class="button" href="#contact" data-i18n="hero.cta_contact">Talk to us</a>
           <a class="button" href="#careers" data-i18n="hero.cta_careers">Careers</a>
         </div>
       </div>
