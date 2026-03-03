@@ -66,6 +66,16 @@
   .hero-subtitle { max-width: 52ch; }
 }
 
+@media (min-width: 1440px) {
+  .hero-content h1 {
+    max-width: 44ch;
+  }
+
+  .hero-subtitle {
+    max-width: 60ch;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero .content {
     padding-inline: clamp(20px, 5vw, 28px);
