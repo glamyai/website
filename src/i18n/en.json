@@ -9,6 +9,9 @@
     "careers": "Careers",
     "contact": "Contact"
   },
+  "platform": {
+    "access": "Access"
+  },
   "hero": {
     "title": "AI you can operate, not just chat with",
     "subtitle": "Route requests, run workflows, and keep costs and outcomes observable — grounded in your company data.",
@@ -191,5 +194,8 @@
       }
     }
   },
-  "footer": "© 2026 Glamy AI"
+  "footer": {
+    "copyright": "© 2026 Glamy AI",
+    "origin": "Built in Italy 🇮🇹"
+  }
 }

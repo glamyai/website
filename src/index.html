@@ -34,12 +34,21 @@
         <a href="#careers" data-i18n="nav.careers">Careers</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
-      <div class="lang-switch" aria-label="Language switch">
-        <button type="button" data-lang="it">IT</button>
-        <span aria-hidden="true">·</span>
-        <button type="button" data-lang="tr">TR</button>
-        <span aria-hidden="true">·</span>
-        <button type="button" data-lang="en">EN</button>
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Language switch">
+          <button type="button" data-lang="it">IT</button>
+          <span aria-hidden="true">·</span>
+          <button type="button" data-lang="tr">TR</button>
+          <span aria-hidden="true">·</span>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <a class="platform-access" href="https://app.glamyai.com/login">
+          <span class="platform-access__label" data-i18n="platform.access">Access</span>
+          <svg class="platform-access__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path d="M8 5.5 11 8 8 10.5" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5 8h6" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
+          </svg>
+        </a>
       </div>
     </div>
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
@@ -52,6 +61,13 @@
           <a href="#trust" data-i18n="nav.trust" hidden aria-hidden="true">Trust</a>
           <a href="#careers" data-i18n="nav.careers">Careers</a>
           <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <a class="mobile-menu__platform-link" href="https://app.glamyai.com/login">
+            <span data-i18n="platform.access">Access</span>
+            <svg class="platform-access__icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+              <path d="M8 5.5 11 8 8 10.5" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 8h6" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
+            </svg>
+          </a>
         </nav>
         <div class="mobile-menu__langs" aria-label="Language switch">
           <button type="button" data-lang="it">IT</button>

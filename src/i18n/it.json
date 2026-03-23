@@ -9,6 +9,9 @@
     "careers": "Carriere",
     "contact": "Contatti"
   },
+  "platform": {
+    "access": "Accedi"
+  },
   "hero": {
     "title": "AI che puoi gestire, non solo con cui chattare",
     "subtitle": "Instrada le richieste ed esegui workflow, mantenendo costi e risultati osservabili sulla base dei dati della tua azienda.",
@@ -191,5 +194,8 @@
       }
     }
   },
-  "footer": "© 2026 Glamy AI"
+  "footer": {
+    "copyright": "© 2026 Glamy AI",
+    "origin": "Sviluppato in Italia 🇮🇹"
+  }
 }

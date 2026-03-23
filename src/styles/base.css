@@ -76,12 +76,17 @@ header {
 }
 
 .header-inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  justify-content: space-between;
   gap: var(--space-4);
   padding: 0.75rem 0;
   min-height: var(--header-h);
+}
+
+header nav[aria-label="Primary"] {
+  justify-self: center;
+  white-space: nowrap;
 }
 
 nav a {
@@ -217,6 +222,55 @@ nav a:last-child { margin-right: 0; }
   -webkit-user-select: none;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 0.9rem;
+}
+
+.platform-access {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  min-height: 40px;
+  padding: 0 0.2rem;
+  color: var(--nav-text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  transition: color 180ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.platform-access:hover,
+.platform-access:active {
+  color: var(--nav-text);
+}
+
+.platform-access:focus {
+  outline: none;
+}
+
+.platform-access:focus-visible {
+  outline: 2px solid var(--nav-focus);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.platform-access__icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  transform: translateY(-0.5px);
+}
+
+.platform-access__label {
+  display: block;
+  line-height: 1;
+}
+
 .lang-switch button {
   border: 0;
   background: transparent;
@@ -256,6 +310,7 @@ header button {
 
 header .brand,
 header nav a,
+header .platform-access,
 header .lang-switch button,
 header .mobile-menu__langs button {
   -webkit-tap-highlight-color: transparent;
@@ -263,6 +318,7 @@ header .mobile-menu__langs button {
 
 header .brand:focus,
 header nav a:focus,
+header .platform-access:focus,
 header .lang-switch button:focus,
 header .mobile-menu__langs button:focus {
   outline: none;
@@ -271,6 +327,7 @@ header .mobile-menu__langs button:focus {
 
 header .brand:active,
 header nav a:active,
+header .platform-access:active,
 header .lang-switch button:active,
 header .mobile-menu__langs button:active {
   box-shadow: none;
@@ -299,6 +356,7 @@ header nav a:focus-visible {
   display: inline-flex;
   align-items: center;
   line-height: 0;
+  justify-self: start;
 }
 
 .brand-logo {
@@ -1304,25 +1362,85 @@ p { margin: 0 0 var(--space-2) 0; }
     padding-inline: clamp(16px, 4vw, 28px);
   }
   .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-wrap: nowrap;
-    gap: var(--space-3);
+    gap: 0;
     padding: 12px 0;
+  }
+  .brand {
+    justify-self: auto;
+    flex: 0 0 auto;
   }
   nav {
     display: none;
   }
-  .lang-switch {
+  .header-actions {
     display: none;
   }
   .nav-toggle {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex: 0 0 auto;
+    margin: 0;
   }
 }
 
 footer {
   padding: var(--space-3) 0;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.footer-origin {
+  color: rgba(15, 23, 42, 0.82);
+  font-weight: 500;
+  text-align: right;
+}
+
+.mobile-menu__platform-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: 0.85rem;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  background: rgba(15, 23, 42, 0.05);
+  font-weight: 600;
+}
+
+.mobile-menu__platform-link:hover,
+.mobile-menu__platform-link:active {
+  background: rgba(15, 23, 42, 0.08);
+}
+
+.mobile-menu__platform-link:focus {
+  outline: none;
+}
+
+.mobile-menu__platform-link:focus-visible {
+  outline: 2px solid var(--nav-focus);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-origin {
+    text-align: left;
+  }
 }
 
 .trust-logos {

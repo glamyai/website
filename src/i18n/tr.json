@@ -9,6 +9,9 @@
     "careers": "Kariyer",
     "contact": "İletişim"
   },
+  "platform": {
+    "access": "Giriş"
+  },
   "hero": {
     "title": "Sadece konuşan değil, yönetilebilen yapay zeka",
     "subtitle": "İstekleri yönlendirin, iş akışlarını çalıştırın; şirket verinize dayanarak maliyeti ve çıktıları görünür tutun.",
@@ -191,5 +194,8 @@
       }
     }
   },
-  "footer": "© 2026 Glamy AI"
+  "footer": {
+    "copyright": "© 2026 Glamy AI",
+    "origin": "İtalya’da geliştirildi 🇮🇹"
+  }
 }
