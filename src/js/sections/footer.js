@@ -2,7 +2,10 @@ export default function footer() {
   return `
     <footer>
       <div class="content footer-inner">
-        <small class="footer-copyright" data-i18n="footer.copyright">© 2026 Glamy AI</small>
+        <div class="footer-copyright-group">
+          <small class="footer-copyright" data-i18n="footer.copyright">© 2026 Glamy AI</small>
+          <small class="footer-legal" data-i18n="footer.legal_owner">Legal Owner: Ozbas Ozkan – P.IVA 05604340264</small>
+        </div>
         <small class="footer-social" aria-label="Social links">
           <a
             class="footer-social__link"
