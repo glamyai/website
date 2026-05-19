@@ -394,6 +394,166 @@ h3 { font-weight: 700; }
 
 p { margin: 0 0 var(--space-2) 0; }
 
+.privacy-page {
+  min-height: calc(100vh - var(--header-h));
+  padding: calc(var(--header-h) + clamp(30px, 6vw, 58px)) 0 clamp(56px, 8vw, 96px);
+  border-bottom: 1px solid #eee;
+  background:
+    linear-gradient(180deg, rgba(248, 250, 252, 0.98) 0%, rgba(255, 255, 255, 1) 260px),
+    #fff;
+}
+
+.privacy-page__inner {
+  width: min(100%, 920px);
+  margin-inline: auto;
+  padding-inline: clamp(18px, 4vw, 36px);
+}
+
+.privacy-document {
+  color: #111827;
+  font-size: clamp(0.98rem, 0.95rem + 0.14vw, 1.04rem);
+  line-height: 1.7;
+}
+
+.privacy-document h1,
+.privacy-document h2,
+.privacy-document h3 {
+  color: #0f172a;
+  letter-spacing: 0;
+}
+
+.privacy-document h1 {
+  max-width: 22ch;
+  margin: 0 0 0.8rem;
+  font-size: clamp(1.85rem, 3vw, 2.45rem);
+  line-height: 1.12;
+  font-weight: 800;
+}
+
+.privacy-document h2 {
+  margin: clamp(1.9rem, 4.5vw, 3rem) 0 0.78rem;
+  font-size: clamp(1.18rem, 1.04rem + 0.48vw, 1.48rem);
+  line-height: 1.22;
+  font-weight: 800;
+}
+
+.privacy-document h3 {
+  margin: clamp(1.65rem, 4vw, 2.35rem) 0 0.75rem;
+  font-size: clamp(1.06rem, 0.98rem + 0.28vw, 1.22rem);
+  line-height: 1.28;
+  font-weight: 750;
+}
+
+.privacy-document h1 + .privacy-document__paragraph,
+.privacy-document h2 + .privacy-document__paragraph,
+.privacy-document h3 + .privacy-document__paragraph {
+  margin-top: 0;
+}
+
+.privacy-document__meta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  margin: 0 0 clamp(1.45rem, 4vw, 2.35rem);
+  padding: 0.34rem 0.7rem;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: rgba(15, 23, 42, 0.68);
+  font-size: 0.86rem;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.privacy-document__paragraph {
+  margin: 0 0 1.05rem;
+  color: rgba(17, 24, 39, 0.88);
+  white-space: pre-line;
+}
+
+.privacy-document__list {
+  margin: 0.2rem 0 1.3rem;
+  padding-left: 1.3rem;
+  color: rgba(17, 24, 39, 0.9);
+}
+
+.privacy-document__list li {
+  margin: 0.38rem 0;
+  padding-left: 0.15rem;
+}
+
+.privacy-contact-card {
+  display: grid;
+  width: min(100%, 620px);
+  margin: 1.15rem 0 0;
+  padding: 0;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.035);
+  overflow: hidden;
+}
+
+.privacy-contact-card__row {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.42fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.9rem 1rem;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.privacy-contact-card__row:first-child {
+  border-top: 0;
+}
+
+.privacy-contact-card dt,
+.privacy-contact-card dd {
+  margin: 0;
+  line-height: 1.35;
+}
+
+.privacy-contact-card dt {
+  color: rgba(15, 23, 42, 0.5);
+  font-size: 0.74rem;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.privacy-contact-card dd {
+  color: rgba(15, 23, 42, 0.86);
+  font-size: 0.95rem;
+  font-weight: 550;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .privacy-page {
+    padding-top: calc(var(--header-h) + 30px);
+  }
+
+  .privacy-document {
+    line-height: 1.66;
+  }
+
+  .privacy-document h1 {
+    max-width: 18ch;
+    font-size: clamp(1.65rem, 7vw, 2.1rem);
+    line-height: 1.08;
+  }
+
+  .privacy-document__meta {
+    border-radius: 8px;
+  }
+
+  .privacy-contact-card__row {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+    padding: 0.85rem 0.9rem;
+  }
+}
+
 .grid-3 {
   display: grid;
   gap: var(--space-3);
@@ -1419,6 +1579,34 @@ footer {
 
 .footer-legal:empty {
   display: none;
+}
+
+.footer-privacy-link {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: 0.15rem;
+  color: rgba(15, 23, 42, 0.88);
+  font-size: 0.8rem;
+  font-weight: 650;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.footer-privacy-link:hover,
+.footer-privacy-link:focus-visible {
+  color: rgba(15, 23, 42, 1);
+}
+
+.footer-privacy-link:focus {
+  outline: none;
+}
+
+.footer-privacy-link:focus-visible {
+  outline: 2px solid var(--nav-focus);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 .footer-social,

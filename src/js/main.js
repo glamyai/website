@@ -1,6 +1,8 @@
 import "../styles/hero.css";
 import { applyTranslations, detectLanguage } from "./i18n.js";
 import { CONTACT_EMAIL, CAREERS_EMAIL } from "./config.js";
+import { renderPrivacyPage } from "./privacy.js";
+import { getPrivacyPath, isPrivacyPath } from "./routes.js";
 
 import hero from "./sections/hero.js";
 import whatWeDo from "./sections/whatWeDo.js";
@@ -14,18 +16,38 @@ import footer from "./sections/footer.js";
 const main = document.getElementById("main");
 const navToggle = document.querySelector(".nav-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
+const isPrivacyPage = isPrivacyPath();
+let activeLang = detectLanguage();
 
-main.innerHTML = [
-  hero(),
-  whatWeDo(),
-  howWeWork(),
-  products(),
-  trust(),
-  careers(),
-  contact()
-].join("");
+if (isPrivacyPage) {
+  main.replaceChildren(renderPrivacyPage(activeLang));
+} else {
+  main.innerHTML = [
+    hero(),
+    whatWeDo(),
+    howWeWork(),
+    products(),
+    trust(),
+    careers(),
+    contact()
+  ].join("");
+}
 
 document.body.insertAdjacentHTML("beforeend", footer());
+
+function updatePrivacyLinks(lang) {
+  document.querySelectorAll("[data-privacy-link]").forEach((link) => {
+    link.setAttribute("href", getPrivacyPath(lang));
+  });
+}
+
+function updateHeaderLinksForPage() {
+  if (!isPrivacyPage) return;
+  document.querySelectorAll("header a[href^=\"#\"]").forEach((link) => {
+    const hash = link.getAttribute("href");
+    link.setAttribute("href", `/${hash}`);
+  });
+}
 
 const emailEl = document.querySelector("[data-contact-email]");
 if (emailEl) {
@@ -33,8 +55,9 @@ if (emailEl) {
   emailEl.setAttribute("href", `mailto:${CONTACT_EMAIL}`);
 }
 
-const initialLang = detectLanguage();
-applyTranslations(initialLang);
+applyTranslations(activeLang);
+updatePrivacyLinks(activeLang);
+updateHeaderLinksForPage();
 
 function updateTrustMarkets() {
   const listEl = document.querySelector("[data-trust-markets]");
@@ -136,7 +159,13 @@ applyHeroTitleLines();
 document.querySelectorAll("[data-lang]").forEach((btn) => {
   btn.addEventListener("click", () => {
     const lang = btn.getAttribute("data-lang");
+    if (isPrivacyPage) {
+      window.location.href = getPrivacyPath(lang);
+      return;
+    }
+    activeLang = lang;
     applyTranslations(lang);
+    updatePrivacyLinks(lang);
     updateTrustMarkets();
     applyHeroTitleLines();
     replaySubtitleReveal();

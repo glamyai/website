@@ -5,6 +5,7 @@ export default function footer() {
         <div class="footer-copyright-group">
           <small class="footer-copyright" data-i18n="footer.copyright">© 2026 Glamy AI</small>
           <small class="footer-legal" data-i18n="footer.legal_owner">Legal Owner: Ozbas Ozkan – P.IVA 05604340264</small>
+          <a class="footer-privacy-link" href="/en/privacy" data-privacy-link data-i18n="footer.privacy_notice">Privacy Notice</a>
         </div>
         <small class="footer-social" aria-label="Social links">
           <a

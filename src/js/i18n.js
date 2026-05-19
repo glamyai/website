@@ -1,6 +1,7 @@
 import en from "../i18n/en.json";
 import tr from "../i18n/tr.json";
 import it from "../i18n/it.json";
+import { getLanguageFromPath } from "./routes.js";
 
 export const dictionaries = { en, tr, it };
 
@@ -25,6 +26,9 @@ export function applyTranslations(lang) {
 }
 
 export function detectLanguage() {
+  const pathLang = getLanguageFromPath();
+  if (pathLang) return pathLang;
+
   const lang = (navigator.language || "en").toLowerCase();
   if (lang.startsWith("tr")) return "tr";
   if (lang.startsWith("it")) return "it";
