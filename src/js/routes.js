@@ -21,16 +21,16 @@ export function getPrivacyPath(lang) {
 export function isResearchPath(pathname = window.location.pathname) {
   const parts = pathname.split("/").filter(Boolean);
   if (parts.length === 2) {
-    return parts[0] === "research" && parts[1] === "market-oppurtunity";
+    return parts[0] === "research" && parts[1] === "market-opportunity";
   }
   return (
     parts.length === 3 &&
     supportedLanguages.includes(parts[0]) &&
     parts[1] === "research" &&
-    parts[2] === "market-oppurtunity"
+    parts[2] === "market-opportunity"
   );
 }
 
 export function getResearchPath(lang) {
-  return `/${normalizeLanguage(lang)}/research/market-oppurtunity`;
+  return `/${normalizeLanguage(lang)}/research/market-opportunity/`;
 }
