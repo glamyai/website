@@ -1,5 +1,21 @@
 import { privacyNotices } from "./privacyContent.js";
-import { normalizeLanguage } from "./routes.js";
+import { applyLocalizedPageMetadata } from "./pageMetadata.js";
+import { getPrivacyPath, normalizeLanguage } from "./routes.js";
+
+const privacyMetadata = {
+  en: {
+    title: "Privacy Notice | Glamy",
+    description: "Privacy Notice for Glamy and Glamy-powered services."
+  },
+  tr: {
+    title: "Gizlilik Bildirimi | Glamy",
+    description: "Glamy ve Glamy destekli hizmetler için gizlilik bildirimi."
+  },
+  it: {
+    title: "Informativa Privacy | Glamy",
+    description: "Informativa privacy per Glamy e i servizi basati su Glamy."
+  }
+};
 
 const lastUpdatedByLang = {
   en: "Last Updated: May 19, 2026",
@@ -72,6 +88,44 @@ function headingLevel(line, index, previousLine, nextLine) {
   return 0;
 }
 
+function markdownHeading(line) {
+  const match = line.match(/^(#{1,4})\s+(.+)$/);
+  if (!match) return null;
+  return {
+    level: Math.min(match[1].length, 4),
+    text: match[2]
+  };
+}
+
+function createSourceLine(line) {
+  const match = line.match(/^(Source|Sources|Kaynak|Kaynaklar|Fonte|Fonti):\s+(.+)$/);
+  if (!match) return null;
+
+  const source = document.createElement("p");
+  source.className = "research-source";
+
+  const label = document.createElement("span");
+  label.className = "research-source__label";
+  label.textContent = `${match[1]}:`;
+  source.appendChild(label);
+
+  const linkPattern = /\[([^\]]+)\]\((https:\/\/[^)]+)\)/g;
+  let cursor = 0;
+  let linkMatch;
+  while ((linkMatch = linkPattern.exec(match[2])) !== null) {
+    source.appendChild(document.createTextNode(match[2].slice(cursor, linkMatch.index)));
+    const link = document.createElement("a");
+    link.href = linkMatch[2];
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = linkMatch[1];
+    source.appendChild(link);
+    cursor = linkPattern.lastIndex;
+  }
+  source.appendChild(document.createTextNode(match[2].slice(cursor)));
+  return source;
+}
+
 export function renderMarkdownDocument(markdown, lang = "en") {
   const pageLang = normalizeLanguage(lang);
   const article = document.createElement("article");
@@ -79,6 +133,7 @@ export function renderMarkdownDocument(markdown, lang = "en") {
   const lines = markdown.replace(/\r\n/g, "\n").split("\n");
   let paragraph = [];
   let list = null;
+  let quote = [];
 
   function flushParagraph() {
     if (paragraph.length === 0) return;
@@ -92,6 +147,12 @@ export function renderMarkdownDocument(markdown, lang = "en") {
     list = null;
   }
 
+  function flushQuote() {
+    if (quote.length === 0) return;
+    article.appendChild(createTextElement("div", quote.join("\n"), "privacy-document__calculation"));
+    quote = [];
+  }
+
   lines.forEach((rawLine, index) => {
     const line = rawLine.trim();
     const previousLine = lines[index - 1] || "";
@@ -100,8 +161,28 @@ export function renderMarkdownDocument(markdown, lang = "en") {
     if (!line) {
       flushParagraph();
       flushList();
+      flushQuote();
       return;
     }
+
+    if (/^---+$/.test(line) || line === "⸻") {
+      flushParagraph();
+      flushList();
+      flushQuote();
+      const divider = document.createElement("hr");
+      divider.className = "privacy-document__divider";
+      article.appendChild(divider);
+      return;
+    }
+
+    if (line.startsWith("> ")) {
+      flushParagraph();
+      flushList();
+      quote.push(line.slice(2));
+      return;
+    }
+
+    flushQuote();
 
     if (line.startsWith("- ")) {
       flushParagraph();
@@ -114,6 +195,20 @@ export function renderMarkdownDocument(markdown, lang = "en") {
     }
 
     flushList();
+
+    const sourceLine = createSourceLine(line);
+    if (sourceLine) {
+      flushParagraph();
+      article.appendChild(sourceLine);
+      return;
+    }
+
+    const explicitHeading = markdownHeading(line);
+    if (explicitHeading) {
+      flushParagraph();
+      article.appendChild(createTextElement(`h${explicitHeading.level}`, explicitHeading.text));
+      return;
+    }
 
     if (isControllerLabel(line) && nextLine.trim()) {
       flushParagraph();
@@ -151,6 +246,7 @@ export function renderMarkdownDocument(markdown, lang = "en") {
 
   flushParagraph();
   flushList();
+  flushQuote();
   return article;
 }
 
@@ -170,4 +266,12 @@ export function renderPrivacyPage(lang) {
   inner.appendChild(documentEl);
   section.appendChild(inner);
   return section;
+}
+
+export function applyPrivacyMetadata(lang) {
+  applyLocalizedPageMetadata({
+    lang: normalizeLanguage(lang),
+    metadata: privacyMetadata,
+    pathForLanguage: getPrivacyPath
+  });
 }

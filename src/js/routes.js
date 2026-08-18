@@ -17,3 +17,20 @@ export function isPrivacyPath(pathname = window.location.pathname) {
 export function getPrivacyPath(lang) {
   return `/${normalizeLanguage(lang)}/privacy`;
 }
+
+export function isResearchPath(pathname = window.location.pathname) {
+  const parts = pathname.split("/").filter(Boolean);
+  if (parts.length === 2) {
+    return parts[0] === "research" && parts[1] === "market-oppurtunity";
+  }
+  return (
+    parts.length === 3 &&
+    supportedLanguages.includes(parts[0]) &&
+    parts[1] === "research" &&
+    parts[2] === "market-oppurtunity"
+  );
+}
+
+export function getResearchPath(lang) {
+  return `/${normalizeLanguage(lang)}/research/market-oppurtunity`;
+}

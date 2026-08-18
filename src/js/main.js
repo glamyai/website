@@ -1,8 +1,15 @@
 import "../styles/hero.css";
 import { applyTranslations, detectLanguage } from "./i18n.js";
 import { CONTACT_EMAIL, CAREERS_EMAIL } from "./config.js";
-import { renderPrivacyPage } from "./privacy.js";
-import { getPrivacyPath, isPrivacyPath } from "./routes.js";
+import { applyPrivacyMetadata, renderPrivacyPage } from "./privacy.js";
+import { applyResearchMetadata, renderMarketOpportunityPage } from "./research.js";
+import {
+  getLanguageFromPath,
+  getPrivacyPath,
+  getResearchPath,
+  isPrivacyPath,
+  isResearchPath
+} from "./routes.js";
 
 import hero from "./sections/hero.js";
 import whatWeDo from "./sections/whatWeDo.js";
@@ -17,10 +24,16 @@ const main = document.getElementById("main");
 const navToggle = document.querySelector(".nav-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
 const isPrivacyPage = isPrivacyPath();
-let activeLang = detectLanguage();
+const isResearchPage = isResearchPath();
+const isDocumentPage = isPrivacyPage || isResearchPage;
+let activeLang = isResearchPage && !getLanguageFromPath() ? "en" : detectLanguage();
 
 if (isPrivacyPage) {
   main.replaceChildren(renderPrivacyPage(activeLang));
+  applyPrivacyMetadata(activeLang);
+} else if (isResearchPage) {
+  main.replaceChildren(renderMarketOpportunityPage(activeLang));
+  applyResearchMetadata(activeLang);
 } else {
   main.innerHTML = [
     hero(),
@@ -42,7 +55,7 @@ function updatePrivacyLinks(lang) {
 }
 
 function updateHeaderLinksForPage() {
-  if (!isPrivacyPage) return;
+  if (!isDocumentPage) return;
   document.querySelectorAll("header a[href^=\"#\"]").forEach((link) => {
     const hash = link.getAttribute("href");
     link.setAttribute("href", `/${hash}`);
@@ -161,6 +174,10 @@ document.querySelectorAll("[data-lang]").forEach((btn) => {
     const lang = btn.getAttribute("data-lang");
     if (isPrivacyPage) {
       window.location.href = getPrivacyPath(lang);
+      return;
+    }
+    if (isResearchPage) {
+      window.location.href = getResearchPath(lang);
       return;
     }
     activeLang = lang;
