@@ -1,4 +1,6 @@
-# The Living Organization Thesis — Version 1.0
+# The Living Organization Thesis
+
+Version 1.0
 
 Özkan Özbaş · 19 August 2026
 

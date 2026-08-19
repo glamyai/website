@@ -63,6 +63,7 @@ function formatThesisHeader(documentEl) {
 
   const headerLines = header.querySelectorAll("p");
   const lineClasses = [
+    "research-document__version",
     "research-document__byline",
     "research-document__archive",
     "research-document__doi",

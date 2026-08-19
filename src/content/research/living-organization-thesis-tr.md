@@ -1,4 +1,6 @@
-# Yaşayan Organizasyon Tezi — Sürüm 1.0
+# Yaşayan Organizasyon Tezi
+
+Sürüm 1.0
 
 Özkan Özbaş · 19 Ağustos 2026
 

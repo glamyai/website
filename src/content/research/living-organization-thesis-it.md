@@ -1,4 +1,6 @@
-# La tesi dell'organizzazione vivente — Versione 1.0
+# La tesi dell'organizzazione vivente
+
+Versione 1.0
 
 Özkan Özbaş · 19 agosto 2026
 

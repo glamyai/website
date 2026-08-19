@@ -570,6 +570,12 @@ p { margin: 0 0 var(--space-2) 0; }
   margin-bottom: 0.42rem;
 }
 
+.research-document__version {
+  color: rgba(15, 23, 42, 0.62);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
 .research-document__subtitle {
   color: rgba(15, 23, 42, 0.68);
   font-size: 1rem;
@@ -588,6 +594,13 @@ p { margin: 0 0 var(--space-2) 0; }
 
 .research-document__doi {
   font-size: 0.88rem;
+}
+
+.research-document__doi a {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.2em;
 }
 
 .research-table-wrap {
