@@ -22,6 +22,8 @@ ACV medio a fine anno;€12K;€18K;€27K;€40K;€55K
 
 I ricavi riconosciuti e l'ARR di fine anno sono riportati separatamente per una ragione precisa. I clienti acquisiti nel corso dell'anno contribuiscono ai ricavi riconosciuti solo per una parte dell'esercizio, mentre l'ARR di fine anno rappresenta il valore ricorrente annualizzato raggiunto alla chiusura dell'anno.
 
+**Il numero di clienti a fine anno rappresenta i clienti attivi alla chiusura dell'esercizio, al netto del churn.**
+
 
 CRESCITA DEI CLIENTI E DISTRIBUZIONE
 

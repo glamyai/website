@@ -22,6 +22,8 @@ Karma Yıl Sonu ACV;€12K;€18K;€27K;€40K;€55K
 
 Muhasebeleştirilen gelir ile Yıl Sonu ARR özellikle ayrı gösterilmiştir. Yıl içinde kazanılan müşteriler muhasebeleştirilen gelire yalnızca yılın ilgili bölümünde katkıda bulunurken Yıl Sonu ARR, yıl sonundaki yıllıklandırılmış yinelenen gelir seviyesini gösterir.
 
+**Yıl Sonu Müşteri Sayısı, müşteri kayıpları düşüldükten sonra yıl sonunda aktif olan müşterileri ifade eder.**
+
 
 MÜŞTERİ BÜYÜMESİ VE DAĞITIM
 

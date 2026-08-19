@@ -22,6 +22,8 @@ Blended Exit ACV;€12K;€18K;€27K;€40K;€55K
 
 Recognized revenue and Exit ARR are intentionally shown separately. Customers acquired during a year contribute only a partial year of recognized revenue, while Exit ARR represents the recurring annualized run-rate at year end.
 
+**EOY Customers represents active customers at year-end, net of customer churn.**
+
 
 CUSTOMER GROWTH & DISTRIBUTION
 
