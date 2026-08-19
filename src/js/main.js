@@ -2,13 +2,13 @@ import "../styles/hero.css";
 import { applyTranslations, detectLanguage } from "./i18n.js";
 import { CONTACT_EMAIL, CAREERS_EMAIL } from "./config.js";
 import { applyPrivacyMetadata, renderPrivacyPage } from "./privacy.js";
-import { applyResearchMetadata, renderMarketOpportunityPage } from "./research.js";
+import { applyResearchMetadata, renderResearchPage } from "./research.js";
 import {
   getLanguageFromPath,
   getPrivacyPath,
   getResearchPath,
-  isPrivacyPath,
-  isResearchPath
+  getResearchSlugFromPath,
+  isPrivacyPath
 } from "./routes.js";
 
 import hero from "./sections/hero.js";
@@ -24,7 +24,8 @@ const main = document.getElementById("main");
 const navToggle = document.querySelector(".nav-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
 const isPrivacyPage = isPrivacyPath();
-const isResearchPage = isResearchPath();
+const activeResearchSlug = getResearchSlugFromPath();
+const isResearchPage = Boolean(activeResearchSlug);
 const isDocumentPage = isPrivacyPage || isResearchPage;
 let activeLang = isResearchPage && !getLanguageFromPath() ? "en" : detectLanguage();
 
@@ -32,8 +33,8 @@ if (isPrivacyPage) {
   main.replaceChildren(renderPrivacyPage(activeLang));
   applyPrivacyMetadata(activeLang);
 } else if (isResearchPage) {
-  main.replaceChildren(renderMarketOpportunityPage(activeLang));
-  applyResearchMetadata(activeLang);
+  main.replaceChildren(renderResearchPage(activeResearchSlug, activeLang));
+  applyResearchMetadata(activeResearchSlug, activeLang);
 } else {
   main.innerHTML = [
     hero(),
@@ -177,7 +178,7 @@ document.querySelectorAll("[data-lang]").forEach((btn) => {
       return;
     }
     if (isResearchPage) {
-      window.location.href = getResearchPath(lang);
+      window.location.href = getResearchPath(lang, activeResearchSlug);
       return;
     }
     activeLang = lang;

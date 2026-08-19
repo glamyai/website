@@ -80,7 +80,7 @@ function headingLevel(line, index, previousLine, nextLine) {
     !previousLine.trim() &&
     !nextLine.trim() &&
     !line.includes(":") &&
-    /^[A-ZÇĞİÖŞÜ0-9][A-ZÇĞİÖŞÜ0-9\s.,:;()/&'-]+$/.test(line) &&
+    /^\p{Lu}[\p{Lu}\p{N}\s.,:;()/&'-]+$/u.test(line) &&
     line.length <= 90
   ) {
     return 2;
@@ -126,7 +126,44 @@ function createSourceLine(line) {
   return source;
 }
 
-export function renderMarkdownDocument(markdown, lang = "en") {
+function createDataTable(rows) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "research-table-wrap";
+  wrapper.setAttribute("tabindex", "0");
+  wrapper.setAttribute("role", "region");
+
+  const table = document.createElement("table");
+  table.className = "research-table";
+  const [headerRow, ...bodyRows] = rows;
+  const head = document.createElement("thead");
+  const headRow = document.createElement("tr");
+  headerRow.forEach((cell) => {
+    const headerCell = createTextElement("th", cell);
+    headerCell.setAttribute("scope", "col");
+    headRow.appendChild(headerCell);
+  });
+  head.appendChild(headRow);
+  table.appendChild(head);
+
+  if (bodyRows.length > 0) {
+    const body = document.createElement("tbody");
+    bodyRows.forEach((row) => {
+      const tableRow = document.createElement("tr");
+      row.forEach((cell, index) => {
+        const cellEl = createTextElement(index === 0 ? "th" : "td", cell);
+        if (index === 0) cellEl.setAttribute("scope", "row");
+        tableRow.appendChild(cellEl);
+      });
+      body.appendChild(tableRow);
+    });
+    table.appendChild(body);
+  }
+
+  wrapper.appendChild(table);
+  return wrapper;
+}
+
+export function renderMarkdownDocument(markdown, lang = "en", { tables = false } = {}) {
   const pageLang = normalizeLanguage(lang);
   const article = document.createElement("article");
   article.className = "privacy-document";
@@ -134,6 +171,7 @@ export function renderMarkdownDocument(markdown, lang = "en") {
   let paragraph = [];
   let list = null;
   let quote = [];
+  let table = [];
 
   function flushParagraph() {
     if (paragraph.length === 0) return;
@@ -153,6 +191,12 @@ export function renderMarkdownDocument(markdown, lang = "en") {
     quote = [];
   }
 
+  function flushTable() {
+    if (table.length === 0) return;
+    article.appendChild(createDataTable(table));
+    table = [];
+  }
+
   lines.forEach((rawLine, index) => {
     const line = rawLine.trim();
     const previousLine = lines[index - 1] || "";
@@ -162,6 +206,7 @@ export function renderMarkdownDocument(markdown, lang = "en") {
       flushParagraph();
       flushList();
       flushQuote();
+      flushTable();
       return;
     }
 
@@ -169,6 +214,7 @@ export function renderMarkdownDocument(markdown, lang = "en") {
       flushParagraph();
       flushList();
       flushQuote();
+      flushTable();
       const divider = document.createElement("hr");
       divider.className = "privacy-document__divider";
       article.appendChild(divider);
@@ -178,11 +224,21 @@ export function renderMarkdownDocument(markdown, lang = "en") {
     if (line.startsWith("> ")) {
       flushParagraph();
       flushList();
+      flushTable();
       quote.push(line.slice(2));
       return;
     }
 
     flushQuote();
+
+    if (tables && line.includes(";")) {
+      flushParagraph();
+      flushList();
+      table.push(line.split(";").map((cell) => cell.trim()));
+      return;
+    }
+
+    flushTable();
 
     if (line.startsWith("- ")) {
       flushParagraph();
@@ -247,6 +303,7 @@ export function renderMarkdownDocument(markdown, lang = "en") {
   flushParagraph();
   flushList();
   flushQuote();
+  flushTable();
   return article;
 }
 
