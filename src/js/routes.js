@@ -1,5 +1,9 @@
 export const supportedLanguages = ["en", "tr", "it"];
-export const supportedResearchSlugs = ["market-opportunity", "financial-model"];
+export const supportedResearchSlugs = [
+  "market-opportunity",
+  "financial-model",
+  "living-organization-thesis"
+];
 
 export function normalizeLanguage(lang) {
   return supportedLanguages.includes(lang) ? lang : "en";

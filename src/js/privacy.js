@@ -30,6 +30,42 @@ function createTextElement(tagName, text, className) {
   return el;
 }
 
+function appendInlineMarkup(parent, text) {
+  const pattern = /\*\*(.+?)\*\*|\*([^*]+?)\*|\[([^\]]+)\]\((https:\/\/[^)]+)\)/g;
+  let cursor = 0;
+  let match;
+
+  while ((match = pattern.exec(text)) !== null) {
+    parent.appendChild(document.createTextNode(text.slice(cursor, match.index)));
+    if (match[1]) {
+      const strong = document.createElement("strong");
+      appendInlineMarkup(strong, match[1]);
+      parent.appendChild(strong);
+    } else if (match[2]) {
+      const emphasis = document.createElement("em");
+      emphasis.textContent = match[2];
+      parent.appendChild(emphasis);
+    } else {
+      const link = document.createElement("a");
+      link.href = match[4];
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = match[3];
+      parent.appendChild(link);
+    }
+    cursor = pattern.lastIndex;
+  }
+
+  parent.appendChild(document.createTextNode(text.slice(cursor)));
+}
+
+function createRichTextElement(tagName, text, className) {
+  const el = document.createElement(tagName);
+  if (className) el.className = className;
+  appendInlineMarkup(el, text);
+  return el;
+}
+
 function isLastUpdatedLine(line) {
   return /^(Last Updated|Son Güncelleme Tarihi|Ultimo aggiornamento):/i.test(line);
 }
@@ -175,7 +211,7 @@ export function renderMarkdownDocument(markdown, lang = "en", { tables = false }
 
   function flushParagraph() {
     if (paragraph.length === 0) return;
-    article.appendChild(createTextElement("p", paragraph.join("\n"), "privacy-document__paragraph"));
+    article.appendChild(createRichTextElement("p", paragraph.join("\n"), "privacy-document__paragraph"));
     paragraph = [];
   }
 
@@ -187,7 +223,7 @@ export function renderMarkdownDocument(markdown, lang = "en", { tables = false }
 
   function flushQuote() {
     if (quote.length === 0) return;
-    article.appendChild(createTextElement("div", quote.join("\n"), "privacy-document__calculation"));
+    article.appendChild(createRichTextElement("div", quote.join("\n"), "privacy-document__calculation"));
     quote = [];
   }
 
@@ -246,7 +282,7 @@ export function renderMarkdownDocument(markdown, lang = "en", { tables = false }
         list = document.createElement("ul");
         list.className = "privacy-document__list";
       }
-      list.appendChild(createTextElement("li", line.slice(2)));
+      list.appendChild(createRichTextElement("li", line.slice(2)));
       return;
     }
 

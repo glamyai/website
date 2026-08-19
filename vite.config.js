@@ -20,7 +20,11 @@ export default defineConfig({
         financialModel: resolve(__dirname, "src/research/financial-model/index.html"),
         financialModelEn: resolve(__dirname, "src/en/research/financial-model/index.html"),
         financialModelTr: resolve(__dirname, "src/tr/research/financial-model/index.html"),
-        financialModelIt: resolve(__dirname, "src/it/research/financial-model/index.html")
+        financialModelIt: resolve(__dirname, "src/it/research/financial-model/index.html"),
+        livingOrganizationThesis: resolve(__dirname, "src/research/living-organization-thesis/index.html"),
+        livingOrganizationThesisEn: resolve(__dirname, "src/en/research/living-organization-thesis/index.html"),
+        livingOrganizationThesisTr: resolve(__dirname, "src/tr/research/living-organization-thesis/index.html"),
+        livingOrganizationThesisIt: resolve(__dirname, "src/it/research/living-organization-thesis/index.html")
       }
     }
   }
